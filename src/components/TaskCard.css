@@ -1,0 +1,204 @@
+/* Task Card Container */
+.task_card {
+    width: 100%;
+    min-height: 100px;
+    border: 1px solid #e6e6e6;
+    border-radius: 12px;
+    padding: 20px;
+    margin: 20px 0;
+    background-color: #ffffff;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.03);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .task_card:hover {
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
+    transform: translateY(-2px);
+    border-color: #d5d5d5;
+  }
+  
+  /* Task status indicator */
+  .task_card::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 4px;
+    background-color: #3813f4; /* Default status color */
+    opacity: 0.8;
+  }
+  
+  /* Different status colors - you can add these classes conditionally */
+  .task_card.status_todo::before {
+    background-color: #f0b400;
+  }
+  
+  .task_card.status_doing::before {
+    background-color: #3813f4;
+  }
+  
+  .task_card.status_done::before {
+    background-color: #10b981;
+  }
+  
+  /* Task Text */
+  .task_text {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 18px;
+    color: #333;
+    line-height: 1.4;
+    letter-spacing: 0.2px;
+  }
+  
+  /* Task Card Bottom Section */
+  .task_card_bottom_line {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  /* Task Tags in Bottom Section */
+  .task_tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  
+  .task_tag {
+    font-size: 12px;
+    font-weight: 500;
+    background-color: #f5f5f7;
+    border-radius: 12px;
+    padding: 4px 10px;
+    color: #555;
+  }
+  
+  .task_tag.html {
+    background-color: rgba(227, 79, 38, 0.1);
+    color: #E34F26; /* HTML color */
+  }
+  
+  .task_tag.css {
+    background-color: rgba(38, 77, 228, 0.1);
+    color: #264DE4; /* CSS color */
+  }
+  
+  .task_tag.javascript {
+    background-color: rgba(240, 219, 79, 0.1);
+    color: #F0DB4F; /* JavaScript color */
+  }
+  
+  .task_tag.react {
+    background-color: rgba(97, 218, 251, 0.1);
+    color: #61DAFB; /* React color */
+  }
+  
+  .task_tag.nodejs {
+    background-color: rgba(104, 160, 99, 0.1);
+    color: #68A063; /* Node.js color */
+  }
+  
+  .task_tag.python {
+    background-color: rgba(52, 102, 144, 0.1);
+    color: #346684; /* Python color */
+  }
+  
+  .task_tag.django {
+    background-color: rgba(9, 45, 51, 0.1);
+    color: #092D33; /* Django color */
+  }
+  
+  /* Task Status in Bottom Section */
+  .task_status_badge {
+    font-size: 12px;
+    font-weight: 600;
+    padding: 4px 12px;
+    border-radius: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  
+  .task_status_badge.todo {
+    background-color: rgba(240, 180, 0, 0.15);
+    color: #f0b400;
+  }
+  
+  .task_status_badge.doing {
+    background-color: rgba(56, 19, 244, 0.15);
+    color: #3813f4;
+  }
+  
+  .task_status_badge.done {
+    background-color: rgba(16, 185, 129, 0.15);
+    color: #10b981;
+  }
+  
+  /* Delete Button */
+  .task_delete {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    background-color: transparent;
+  }
+  
+  .task_delete:hover {
+    background-color: #f1f1f4;
+    transform: rotate(5deg);
+  }
+  
+  .task_delete:active {
+    transform: scale(0.95);
+  }
+  
+  .delete_icon {
+    width: 20px;
+    opacity: 0.5;
+    transition: all 0.3s ease;
+  }
+  
+  .task_delete:hover .delete_icon {
+    opacity: 0.9;
+  }
+  
+  /* Task card entrance animation */
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateY(15px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .task_card {
+    animation: slideIn 0.3s ease-out forwards;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .task_card {
+      padding: 16px;
+    }
+    
+    .task_text {
+      font-size: 16px;
+    }
+  }
+  
+  /* List of task cards (if you have a container) */
+  .task_list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }

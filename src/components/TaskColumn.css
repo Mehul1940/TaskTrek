@@ -1,0 +1,10 @@
+.task_column_heading {
+    display: flex;
+    align-items: center; /* Vertically aligns items in the container */
+  }
+  
+  .task_column_icon {
+    width: 30px; /* Explicitly set the width for consistent sizing */
+    margin-right: 10px; /* Creates visual separation from the text */
+    flex-shrink: 0; /* Prevents the icon from shrinking if space is limited */
+  }

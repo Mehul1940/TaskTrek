@@ -1,0 +1,12 @@
+.tag {
+    font-size: 14px;
+    background-color: #e3e3e3;
+    border: none;
+    border-radius: 20px;
+    padding: 6px 14px;
+    color: #333;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-right: 8px;
+    margin-bottom: 8px;
+  }
